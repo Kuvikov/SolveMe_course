@@ -1,3 +1,13 @@
+import requests
 
-def test_one():
-    assert 1 == 1, "Number is not equale expected"
+from configuration import SERVICE_URL
+from src.enums.global_enums import GlobalErrorMessages
+
+
+def test_getting_posts():
+    response = requests.get(url=SERVICE_URL)
+    assert response.status_code == 300, GlobalErrorMessages.WRONG_STATUS_CODE.value
+
+    
+    print(response.json())
+
