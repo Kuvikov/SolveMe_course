@@ -30,3 +30,7 @@
 `pytest test_mod.py::test_func`       
 *Запуск тестов по идентификаторам узлов*
 `pytest test_mod.py::TestClass::test_method`
+*Запуск маркированных тестов*
+`pytest -m slow` - Будут запущены тесты, помеченные декоратором @pytest.mark.slow
+*Запуск тестов в развернутом виде*
+`pytest -s -v .\tests\`
