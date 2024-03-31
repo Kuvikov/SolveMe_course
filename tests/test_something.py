@@ -6,8 +6,7 @@ from src.enums.global_enums import GlobalErrorMessages
 
 def test_getting_posts():
     response = requests.get(url=SERVICE_URL)
-    assert response.status_code == 300, GlobalErrorMessages.WRONG_STATUS_CODE.value
+    response_posts = response.json()
 
-    
-    print(response.json())
-
+    assert response.status_code == 200, GlobalErrorMessages.WRONG_STATUS_CODE.value
+    assert len(response_posts) == 2, GlobalErrorMessages.WRONG_ELEMENT_COUNT.value
