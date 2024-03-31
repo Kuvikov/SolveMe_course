@@ -17,16 +17,16 @@
 
 ## Ключи для pytest
 *Oстановка после первого упавшего теста*
-pytest -x                           
+`pytest -x`                           
 *Oстановка после первых двух упавших тестов*
-pytest --maxfail=2                  
+`pytest --maxfail=2`                  
 *Запуск тестов из директории*
-pytest testing/                     
+`pytest testing/`                    
 *Запуск тестов модуля*
-pytest test_mod.py                  
+`pytest test_mod.py`                
 *Запуск тестов, удовлетворяющих ключевому выражению*
-pytest -k "MyClass and not method"  
+`pytest -k "MyClass and not method"`  
 *Запуск тестов по идентификаторам узлов*
-pytest test_mod.py::test_func       
+`pytest test_mod.py::test_func`       
 *Запуск тестов по идентификаторам узлов*
-pytest test_mod.py::TestClass::test_method
+`pytest test_mod.py::TestClass::test_method`
